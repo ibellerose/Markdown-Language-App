@@ -1,3 +1,4 @@
+//use the markdown language from the github repo included
 const renderer = new marked.Renderer();
 renderer.link = function (href, title, text) {
   return `<a target="_blank" href="${href}">${text}</a>`;
@@ -44,7 +45,11 @@ And here. | Okay. | I think we get it.
 
 
 1. And there are numbered lists too.
-1. Use just 1s if you want!`;
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+`;
 
 class MarkdownBox extends React.Component{
     constructor(props){
